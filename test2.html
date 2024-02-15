@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Help</title>
+    <link rel="stylesheet" type="text/css" href="lang.css"> 
+</head>
+<body>
+    <h1 id="languageHeading">Select your language</h1> 
+    <div class="languageBox" onclick="goToNextPage('eng_login.html')">English</div>
+    <div class="languageBox" onclick="goToNextPage('hin_login.html')">हिन्दी</div>
+    <div class="languageBox" onclick="goToNextPage('mar_login.html')">मराठी</div>
+
+    <script>
+        function goToNextPage(url) {
+            // Add animation class to the selected language box
+            event.target.classList.add('clickedAnimation');
+
+            // Redirect to the next page after a short delay
+            setTimeout(function() {
+                window.location.href = url;
+            }, 500); // Adjust delay time as needed
+        }
+    </script>
+</body>
+</html>
